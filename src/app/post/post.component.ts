@@ -1,10 +1,20 @@
-import {Component, ContentChild, ElementRef, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import { Post } from "../app.component";
+import {
+    Component,
+    ContentChild,
+    ElementRef,
+    EventEmitter,
+    Input,
+    OnInit,
+    Output,
+    ViewEncapsulation
+} from '@angular/core';
+import {Post} from "../app.component";
 
 @Component({
     selector: 'app-post',
     templateUrl: './post.component.html',
-    styleUrls: ['./post.component.scss']
+    styleUrls: ['./post.component.scss'],
+    // encapsulation: ViewEncapsulation.None // delete style hash
 })
 export class PostComponent implements OnInit {
     @Input() post: Post;
